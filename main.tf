@@ -1,17 +1,15 @@
 # main.tf
 #https://codereviewvideos.com/course/installing-kubernetes-rancher-2-terraform/video/provision-digital-ocean-droplet-terraform
-#variable "digitalocean_token" {}
 
 # Configure the Digital Ocean Provider
 provider "digitalocean" {
-  #token = "${var.digitalocean_token}"
 }
 
 #  Resources
 ## Create a new ssh key
 resource "digitalocean_ssh_key" "default" {
   name       = "my ssh key"
-  public_key = "${file("./id_rsa.pub")}"
+  public_key = "${file(".ssh/id_rsa.pub")}"
 }
 
 ## Create a new Digital Ocean Droplet using the SSH key
