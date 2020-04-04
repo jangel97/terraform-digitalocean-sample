@@ -6,3 +6,13 @@ terraform init
 terraform plan
 terraform apply
 ssh -i .ssh/id_rsa <PUBLIC IP OF DROPPLET>
+
+
+
+
+
+
+INFO:
+
+https://www.terraform.io/docs/providers/do/d/sizes.html
+https://www.terraform.io/docs/providers/do/d/droplet.html#private_networking
