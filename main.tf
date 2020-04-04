@@ -9,7 +9,7 @@ provider "digitalocean" {
 ## Create a new ssh key
 resource "digitalocean_ssh_key" "default" {
   name       = "my ssh key"
-  public_key = "${file(".ssh/id_rsa.pub")}"
+  public_key = file(".ssh/id_rsa.pub")
 }
 
 ## Create a new Digital Ocean Droplet using the SSH key
@@ -19,4 +19,14 @@ resource "digitalocean_droplet" "node1" {
   size     = "s-1vcpu-1gb"
   region   = "lon1"
   ssh_keys = ["${digitalocean_ssh_key.default.fingerprint}"]
+  private_networking=true
+}
+## Create a new Digital Ocean Droplet using the SSH key
+resource "digitalocean_droplet" "node2" {
+  name     = "node2"
+  image    = "ubuntu-16-04-x64"
+  size     = "s-1vcpu-1gb"
+  region   = "lon1"
+  ssh_keys = ["${digitalocean_ssh_key.default.fingerprint}"]
+  private_networking=true
 }
