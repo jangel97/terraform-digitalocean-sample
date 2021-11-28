@@ -11,6 +11,7 @@ Run terraform:
 terraform init
 terraform plan
 terraform apply
+terraform output
 ssh -i .ssh/id_rsa <PUBLIC IP OF DROPPLET>
 ```
 
