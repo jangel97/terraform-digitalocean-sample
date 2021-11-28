@@ -1,3 +1,6 @@
+## Description
+Basic example to deploy Droplet on DigitalOcean using Terraform.
+
 ## Usage
 Set token `export DIGITALOCEAN_TOKEN=''`, you can get it from https://cloud.digitalocean.com/account/api/tokens
 
