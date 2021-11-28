@@ -1,5 +1,6 @@
 ## Usage
 Set token `export DIGITALOCEAN_TOKEN=''`, you can get it from https://cloud.digitalocean.com/account/api/tokens
+
 Create ssh key using the following commands:
 ```
 mkdir .ssh
